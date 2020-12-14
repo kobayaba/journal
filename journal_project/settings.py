@@ -38,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #thirds Party
+    'crispy_forms',
+
     #local app
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -106,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
@@ -126,3 +131,5 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
