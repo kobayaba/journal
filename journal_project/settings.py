@@ -134,4 +134,12 @@ LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+DEFAULT_FROM_EMAIL = 'byoussouf228@gmail.com'
+#DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
