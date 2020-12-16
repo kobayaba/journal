@@ -11,4 +11,11 @@
 		<a href="{% url 'login' %}">Connecter</a>
 		<a href="{% url 'signup' %}">Inscription</a>
 	{% endif %}
+	<div class="jumbotron">
+		<h1 class="display-4">Journal app</h1>
+		<p class="lead">Le site du Journal pour la connaissance.</p>
+		<p class="lead">
+			<a href="{% url 'article_list' %}" class="btn btn-primary btn-lg" role='button'>Voir tous les articles</a>
+		</p>		
+	</div>
 {% endblock %}

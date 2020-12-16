@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #local app
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
 
 ]
 
