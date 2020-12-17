@@ -3,14 +3,6 @@
 {% block title %} Accueil {% endblock %}
 
 {% block content %}
-	{% if user.is_authenticated %}
-		Salut {{ user.username }}
-		<p><a href="{% url 'logout' %}">Deconnecter</a></p>
-	{% else %}
-		<p>You are not logged in</p>
-		<a href="{% url 'login' %}">Connecter</a>
-		<a href="{% url 'signup' %}">Inscription</a>
-	{% endif %}
 	<div class="jumbotron">
 		<h1 class="display-4">Journal app</h1>
 		<p class="lead">Le site du Journal pour la connaissance.</p>

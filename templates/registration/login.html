@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
 {% block title %}Connecter{% endblock %}
 
 {% block content %}
-	<h2>Connecter</h2>
-	<form action="" method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button class="btn btn-success ml-2" type='submit'>Connecter</button>
-	</form>
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+		<div class="card ">
+		<div class="card-header ">
+			<h2 class="text-center">Connecter-vous</h2>
+		</div>
+		<div class="card-body">
+			<form action="" method="post">
+			{% csrf_token %}
+			{{ form|crispy }}
+			<button class="btn btn-success ml-2" type='submit'>Connecter</button>
+		</form>
+		</div>
+		<div class="card-footer">
+			<a class="btn btn-default" href="{% url 'password_reset' %}">si vous avez oubliez vos mot de passe cliquez-ici</a>
+		</div>
+		</div>
+	</div>
+	</div>
 {% endblock %}
